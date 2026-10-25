@@ -1,0 +1,26 @@
+{
+  "name": "star-quest-2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check:content": "vitest run tests/content.test.ts tests/game/campaign.test.ts",
+    "test:e2e": "playwright test",
+    "test:production": "npm run build && node scripts/check-production.mjs"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@playwright/test": "^1.55.0",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.0",
+    "vitest": "^3.2.4"
+  }
+}
